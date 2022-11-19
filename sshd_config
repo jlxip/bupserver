@@ -5,6 +5,7 @@ PermitEmptyPasswords no
 ChallengeResponseAuthentication no
 UsePAM yes
 
+AllowTcpForwarding no
 X11Forwarding no
 PrintMotd no
 PrintLastLog no

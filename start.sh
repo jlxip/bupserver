@@ -6,15 +6,15 @@ if [ ! -f "$SENTINEL" ]; then
 	rm /etc/ssh/ssh_host_*
 	dpkg-reconfigure openssh-server
 
-	echo "--- Copying SSH configuration ---"
-	cp /.sshd_config /etc/ssh/sshd_config
-
 	echo "--- Generating your SSH key ---"
 	mkdir -p /etc/ssh/yourssh
 	ssh-keygen -t ed25519 -f /etc/ssh/yourssh/key -q -N ""
 
 	touch "$SENTINEL"
 fi
+
+# It might change in some updates
+cp /.sshd_config /etc/ssh/sshd_config
 
 echo "--- Copying SSH key ---"
 mkdir /home/user/.ssh

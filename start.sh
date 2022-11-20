@@ -16,10 +16,12 @@ fi
 # It might change in some updates
 cp /.sshd_config /etc/ssh/sshd_config
 
-echo "--- Copying SSH key ---"
-mkdir /home/user/.ssh
-cat /etc/ssh/yourssh/key.pub > /home/user/.ssh/authorized_keys
-chown -R user:user /home/user/.ssh
+if [ ! -d /home/user/.ssh ]; then
+	echo "--- Copying SSH key ---"
+	mkdir /home/user/.ssh
+	cat /etc/ssh/yourssh/key.pub > /home/user/.ssh/authorized_keys
+	chown -R user:user /home/user/.ssh
+fi
 
 touch /home/user/.hushlogin
 

@@ -7,7 +7,8 @@ This image is based on `ubuntu`, which is uncool; turns out there's no `bup` pac
 
 ## Tags
 `jlxip/bupserver` follows [Semantic Versioning 2.0.0](https://semver.org/spec/v2.0.0.html), so its tags are done accordingly:
-- `latest`, `1`, `1.0`, `1.0.2`
+- `latest`, `1`, `1.0`, `1.0.3`
+- `1.0.2`
 - `1.0.1`
 - `1.0.0`
 
